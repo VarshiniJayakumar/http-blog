@@ -1,0 +1,104 @@
+Title: Objects and Their Internal Representation in JavaScript
+
+Introduction
+
+   JavaScript is a versatile and widely used programming language, known for its ability to manipulate and manage
+data efficiently. One of the fundamental data structures in JavaScript is the object. Objects are used to store and 
+organize data, and they play a crucial role in JavaScript's core functionality. In this blog, we'll explore how objects
+are internally represented in JavaScript and gain a deeper understanding of their characteristics.
+
+Objects in JavaScript:
+
+    In JavaScript, objects are collections of key-value pairs, where each key is a string (or symbol) that uniquely 
+identifies a value. Objects can hold various types of data, including numbers, strings, functions, and even other
+objects. They serve as a fundamental building block for complex data structures and are central to the language's flexibility.
+
+Creating Objects:
+
+You can create objects in JavaScript using two primary methods:
+
+Object Literal Notation:
+
+const person = {
+    name: "John",
+    age: 30,
+};
+
+const person = new Object();
+person.name = "John";
+person.age = 30;
+
+Internal Representation of Objects:
+
+Property Names and Values:
+
+     Every object in JavaScript has an internal representation where it stores its properties and their 
+corresponding values. These properties are organized using a hash table-like structure, which allows for
+efficient retrieval of values by their keys. This makes property access in objects highly performant, 
+even for a large number of properties.
+
+Property Attributes:
+
+    Each property in an object has associated attributes. These attributes define how the property behaves
+in terms of access, modification, and enumeration. There are two main property attributes:
+
+Value: 
+    This attribute stores the actual data associated with the property. It can be of any data type, including 
+other objects or functions.
+
+Writable:
+    Determines whether the property's value can be changed. If set to false, any attempt to modify the
+property will be ignored in non-strict mode, and it will throw an error in strict mode.
+
+Property Access:
+To access properties of an object, you can use either dot notation or bracket notation:
+
+const person = {
+    name: "John",
+    age: 30,
+};
+
+console.log(person.name); // "John"
+console.log(person['age']); // 30
+
+Adding and Deleting Properties:
+
+ You can dynamically add new properties to an object or delete existing ones:
+
+const person = {
+    name: "John",
+    age: 30,
+};
+
+person.city = "New York"; // Adding a new property
+delete person.age;         // Deleting an existing property
+
+
+Object Methods:
+
+ Objects in JavaScript can also have methods, which are functions stored as property values. 
+These methods can be invoked to perform specific actions related to the object:
+
+const calculator = {
+    add: function (a, b) {
+        return a + b;
+    },
+    subtract: function (a, b) {
+        return a - b;
+    },
+};
+
+console.log(calculator.add(5, 3)); // 8
+
+
+Conclusion:
+
+     Understanding how objects are internally represented in JavaScript is essential for effective 
+programming. Objects provide a versatile way to structure and organize data, making them a fundamental 
+concept in the language. By grasping the key concepts discussed in this blog, you'll be better equipped to
+work with objects and harness their power in your JavaScript applications.
+
+
+
+
+
